@@ -4,7 +4,7 @@ import os
 import boto3
 from config import *
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 bucket = custombucket
 region = customregion
@@ -91,5 +91,5 @@ def AddEmp():
 
 
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     app.run(host='0.0.0.0', port=80,debug=True)
